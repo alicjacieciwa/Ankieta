@@ -42,6 +42,10 @@ def welcome():
 def show_form():
     return render_template('form.html')
 
+@app.route("/form/firstquestion")
+def show_first_question():
+    return render_template('firstquestion.html')
+
 @app.route("/raw")
 def show_raw():
     fd = db.session.query(Formdata).all()
@@ -84,7 +88,7 @@ def show_result():
 
 @app.route("/save", methods=['POST'])
 def save():
-    # Get data from FORM
+    #Get data from FORM
     firstname = request.form['firstname']
     email = request.form['email']
     age = request.form['age']

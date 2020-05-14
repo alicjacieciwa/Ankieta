@@ -5,21 +5,95 @@
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
-    <h1 class="display-4">Welcome to my questionnaire</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <h1 class="display-6">Witaj, zapraszamy Cię do wypełnienia naszej ankiety!</h1>
   </div>
 
-  <div class="page-header">
-    <h1>Chose the next step</h1>
-  </div>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+
+    <style type="text/css">
+        h1 {
+            color:black;
+        }
+        .xyz {
+            background-size: auto;
+            text-align: center;
+            padding-top: 0px;
+        }
+        .btn-circle.btn-green {
+            width: 170px;
+            height: 170px;
+            padding: 10px 16px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            background-color: #006A3C;
+            line-height: 150px;
+        }
+        .btn-circle.btn-black {
+            width: 170px;
+            height: 170px;
+            padding: 50px 16px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            background-color: #1C1C1C;
+        }
+        .btn-circle.btn-red {
+            width: 170px;
+            height: 170px;
+            padding: 50px 16px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            background-color: #9C0018;
+        }
+        .btn-circle.btn-blue {
+            width: 300px;
+            height: 80px;
+            padding: 20px 16px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            background-color: #66A4F9;
+        }
+    </style>
+</head>
 
   <p>
-    <a class="btn btn-primary" href="/form" role="button">Fill the form</a>
-    <a class="btn btn-primary" href="/result" role="button">Review results</a>
+    <a href="/form"  type="button" class="btn btn-circle btn-blue" >Rozpocznij już teraz!</a>
   </p>
 
+<br><br><br>
+<body class="xyz">
+    <a href="#" type="button" class="btn btn-circle btn-green" >Poznaj nasz zespół</a>
+    <a href="#" type="button" class="btn btn-circle btn-black" >Poznaj cele <br> i założenia projektu</a>
+    <a href="#" type="button" class="btn btn-circle btn-red" >Poznaj wyniki innych ankietowanych</a>
+</body>
 
 {% endblock %}
 
