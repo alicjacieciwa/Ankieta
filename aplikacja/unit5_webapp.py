@@ -10,6 +10,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
 
 db = SQLAlchemy(app)
 
+
+
 class Formdata(db.Model):
     __tablename__ = 'formdata'
     id = db.Column(db.Integer, primary_key=True)
@@ -41,6 +43,10 @@ def welcome():
 @app.route("/form")
 def show_form():
     return render_template('form.html')
+
+@app.route("/aboutus")
+def show_aboutus():
+    return render_template('aboutus.html')
 
 @app.route("/form/firstquestion")
 def show_first_question():

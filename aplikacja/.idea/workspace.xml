@@ -2,9 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="143342f7-f0c3-4a1d-a49f-54909ebdc64e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/natalia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/aboutus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/images/natalia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/natalia.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/._unit5.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/._.idea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/._static" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/._templates" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/._unit5_webapp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._inspectionProfiles" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._markdown-navigator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._unit5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/._workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/inspectionProfiles/._Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/.idea/markdown-navigator/._profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/static/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/templates/._base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/templates/._form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/templates/._raw.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/templates/._result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../__MACOSX/unit5.1/templates/._welcome.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formdata.db" beforeDir="false" afterPath="$PROJECT_DIR$/formdata.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit5_webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit5_webapp.py" afterDir="false" />
     </list>
@@ -29,16 +53,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Zg7GCYHCMO3GKUf5oJZ2Z9WSlx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="mySaveCallSignatures" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -165,7 +195,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -178,6 +210,10 @@
     <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="358" y="23" key="#unit5_webapp" timestamp="1585248846245">
