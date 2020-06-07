@@ -46,9 +46,9 @@ def show_form():
 def show_aboutus():
     return render_template('aboutus.html')
 
-@app.route("/form/firstquestion")
-def show_first_question():
-    return render_template('firstquestion.html')
+@app.route("/aboutproject")
+def show_aboutproject():
+    return render_template('aboutproject.html')
 
 @app.route("/raw")
 def show_raw():
