@@ -1,58 +1,7 @@
 <!-- extend base layout -->
 {% extends "base.html" %}
 
-{% block content %}
-
- <body>
-<div class="jumbotron">
-  <p style="text-indent: 6em;  text-align: justify; ">Tematem ankiety, którą teraz wypełnisz jest: „Jak dużo wiesz o koronawirusie?”. Zostanie Ci przedstawione 10 postów,
-      które w czasie pandemii pojawiły się na platformach społecznościowych takich jak Facebook, Instagram czy Twitter.
-      Na podstawie informacji w postach postaraj się odpowiedzieć zgodnie z prawdą na pytania umieszczone poniżej konkretnego
-      postu.
-</p>
-
-
-<div id="sh" style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>
-<div id="ukryty_tekst">
-    <form role="form" action="/save" method="post">
-    <h3>Twoje dane osobowe:</h3><br/>
-    <div class="form-group">
-        <label>Płeć:</label><br/>
-        <select name="plec">
-		<option>Kobieta</option>
-		<option>Mężczyzna</option>
-        <option>Inna</option>
-	</select>
-    </div>
-
-     <div class="form-group">
-        <label>Grupa wiekowa:</label><br/>
-        <select name="wiek">
-		<option>mniej niż 18</option>
-		<option>18-25</option>
-        <option>25-40</option>
-        <option>41-60</option>
-        <option>ponad 60</option>
-	</select>
-    </div>
-
-     <div class="form-group">
-        <label>Wykształcenie:</label><br/>
-        <select name="wyksztalcenie">
-		<option>Podstawowe</option>
-		<option>Średnie</option>
-        <option>Wyższe</option>
-        <option>Zawodowe</option>
-        <option>Gimnazjalne</option>
-        <option>Brak</option>
-        <option>Inne</option>
-	</select>
-    </div>
-
-</form>
-
-
-<script>
+{% block content %}<script>
 Array.prototype.random = function(limit)
 {
 	if (typeof limit == 'undefined' || limit < 0) limit = 1;
@@ -88,9 +37,12 @@ console.log(arr);
 for(i = 0; i < arr.length; i++){
 
 document.write(obrazki[arr[i]]);
+document.getElementbyid('form');
 
-
-
+const input = document.querySelector("#someRadio")
+if (input.checked) {
+    console.log("Wartość radio: ", input.value);
+}
 }
 
 </script>
@@ -98,7 +50,7 @@ document.write(obrazki[arr[i]]);
         <div class="form-group">
         <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label></h6>
         <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg"  value="NIE" />
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"
         </div>
 
         <div class="form-group">
@@ -123,39 +75,6 @@ document.write(obrazki[arr[i]]);
     </form>
 
 
-
-
-
-
-
-
 </div>
-
-<script>
-var div = document.getElementById('ukryty_tekst');
-
-div.style.display = 'none';
-document.getElementById('sh').innerHTML = '<div style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>';
-
-document.getElementById('sh').onclick = function()
-{
-    if(div.style.display == 'none')
-    {
-        div.style.display = 'block';
-        this.innerHTML = '';
-    }
-    else
-    {
-        div.style.display = 'none';
-        this.innerHTML = '<div style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>';
-    }
-};
-</script>
-
-
-
-
-
-
 {% endblock %}
 
