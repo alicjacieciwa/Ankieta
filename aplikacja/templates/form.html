@@ -10,8 +10,6 @@
       Na podstawie informacji w postach postaraj się odpowiedzieć zgodnie z prawdą na pytania umieszczone poniżej konkretnego
       postu.
 </p>
-<!--    <div style="text-align: center"><a href="/aboutus" type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</a></div>-->
-<!--</div>-->
 
 
 <div id="sh" style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>
@@ -53,6 +51,7 @@
 
 </form>
 
+
 <script>
 Array.prototype.random = function(limit)
 {
@@ -69,15 +68,41 @@ Array.prototype.random = function(limit)
 }
 
 var ile=2;
+
 obrazki=new Array();
-obrazki[0]='<img src="{{url_for('static', filename='natalia.jpg')}}" width="100"><br/><br/>';
-obrazki[1]='<img src="{{url_for('static', filename='strzalka.png')}}" height="30" ><br/><br/>';
-//obrazek=obrazki[Math.floor(Math.random()*ile)];
-//document.write('<img src="'+obrazki[Math.floor(Math.random()*ile)]+'">'
-document.write(obrazki
-.random(2).join(''));
+obrazki[0]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt1.JPG')}}" width="500"><br/><br/></div>';
+obrazki[1]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt2.JPG')}}" width="500" ><br/><br/></div>';
+obrazki[2]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt3.JPG')}}" width="500" ><br/><br/></div>';
+obrazki[3]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt4.JPG')}}" width="500"><br/><br/></div>';
+obrazki[4]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt5.JPG')}}" width="500"><br/><br/></div>';
+obrazki[5]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt6.JPG')}}" width="500"><br/><br/></div>';
+obrazki[6]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt7.JPG')}}" width="500"><br/><br/></div>';
+
+var arr = [];
+while(arr.length < 4){
+    var r = Math.floor(Math.random() * 7);
+    if(arr.indexOf(r) === -1) arr.push(r);
+}
+console.log(arr);
+
+for(i = 0; i < arr.length; i++){
+
+document.write(obrazki[arr[i]]);
+
+
+}
+
+
+
 
 </script>
+
+
+
+
+
+
+
 
 
 
@@ -105,22 +130,6 @@ document.getElementById('sh').onclick = function()
     }
 };
 </script>
-<!--<form role="form" action="/save" method="post">-->
-<!--    <h3>Twoje dane osobowe:</h3>-->
-<!--    <div class="form-group">-->
-<!--        <label for="firstname">Imię:</label>-->
-<!--        <input type="text" class="form-control" id="firstname" name="firstname" required>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--        <label for="email">Email:</label>-->
-<!--        <input type="email" class="form-control" id="email" name="email" required>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--        <label for="age">Wiek:</label>-->
-<!--        <input type="number" class="form-control" id="age" name="age" min="1" max="100" required>-->
-<!--    </div>-->
-<!--    -->
-<!--</form>-->
 
 
 
