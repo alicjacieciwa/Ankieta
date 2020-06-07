@@ -42,6 +42,10 @@ def welcome():
 def show_form():
     return render_template('form.html')
 
+@app.route("/form/questions")
+def show_questions():
+    return render_template('questions.html')
+
 @app.route("/aboutus")
 def show_aboutus():
     return render_template('aboutus.html')

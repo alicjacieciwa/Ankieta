@@ -3,30 +3,124 @@
 
 {% block content %}
 
-<div class="page-header">
-  <h3>Prośba o wypełnienie formularza, info o danych (nie zostaną wykorzystane itp.) </h3>
-</div>
+ <body>
+<div class="jumbotron">
+  <p style="text-indent: 6em;  text-align: justify; ">Tematem ankiety, którą teraz wypełnisz jest: „Jak dużo wiesz o koronawirusie?”. Zostanie Ci przedstawione 10 postów,
+      które w czasie pandemii pojawiły się na platformach społecznościowych takich jak Facebook, Instagram czy Twitter.
+      Na podstawie informacji w postach postaraj się odpowiedzieć zgodnie z prawdą na pytania umieszczone poniżej konkretnego
+      postu.
+</p>
+<!--    <div style="text-align: center"><a href="/aboutus" type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</a></div>-->
+<!--</div>-->
 
-<form role="form" action="/save" method="post">
-    <h3>Twoje dane osobowe:</h3>
+
+<div id="sh" style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>
+<div id="ukryty_tekst">
+    <form role="form" action="/save" method="post">
+    <h3>Twoje dane osobowe:</h3><br/>
     <div class="form-group">
-        <label for="firstname">Imię:</label>
-        <input type="text" class="form-control" id="firstname" name="firstname" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="age">Wiek:</label>
-        <input type="number" class="form-control" id="age" name="age" min="1" max="100" required>
+        <label>Płeć:</label><br/>
+        <select name="plec">
+		<option>Kobieta</option>
+		<option>Mężczyzna</option>
+        <option>Inna</option>
+	</select>
     </div>
 
+     <div class="form-group">
+        <label>Grupa wiekowa:</label><br/>
+        <select name="wiek">
+		<option>mniej niż 18</option>
+		<option>18-25</option>
+        <option>25-40</option>
+        <option>41-60</option>
+        <option>ponad 60</option>
+	</select>
+    </div>
 
-
-
+     <div class="form-group">
+        <label>Wykształcenie:</label><br/>
+        <select name="wyksztalcenie">
+		<option>Podstawowe</option>
+		<option>Średnie</option>
+        <option>Wyższe</option>
+        <option>Zawodowe</option>
+        <option>Gimnazjalne</option>
+        <option>Brak</option>
+        <option>Inne</option>
+	</select>
+    </div>
 
 </form>
+
+<script>
+Array.prototype.random = function(limit)
+{
+	if (typeof limit == 'undefined' || limit < 0) limit = 1;
+	else if (!limit) limit = this.length;
+	for (var i = 0, source = this, target = new Array(), n = source.length; i < limit && n > 0; i++)
+	{
+		do { var index = Math.random(); } while (index == 1);
+		index = Math.floor(index * n);
+		target.push(source[index]);
+		source[index] = source[--n];
+	}
+	return target;
+}
+
+var ile=2;
+obrazki=new Array();
+obrazki[0]='<img src="{{url_for('static', filename='natalia.jpg')}}" width="100"><br/><br/>';
+obrazki[1]='<img src="{{url_for('static', filename='strzalka.png')}}" height="30" ><br/><br/>';
+//obrazek=obrazki[Math.floor(Math.random()*ile)];
+//document.write('<img src="'+obrazki[Math.floor(Math.random()*ile)]+'">'
+document.write(obrazki
+.random(2).join(''));
+
+</script>
+
+
+
+
+
+</div>
+
+<script>
+var div = document.getElementById('ukryty_tekst');
+
+div.style.display = 'none';
+document.getElementById('sh').innerHTML = '<div style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>';
+
+document.getElementById('sh').onclick = function()
+{
+    if(div.style.display == 'none')
+    {
+        div.style.display = 'block';
+        this.innerHTML = '<div style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>';
+    }
+    else
+    {
+        div.style.display = 'none';
+        this.innerHTML = '<div style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>';
+    }
+};
+</script>
+<!--<form role="form" action="/save" method="post">-->
+<!--    <h3>Twoje dane osobowe:</h3>-->
+<!--    <div class="form-group">-->
+<!--        <label for="firstname">Imię:</label>-->
+<!--        <input type="text" class="form-control" id="firstname" name="firstname" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label for="email">Email:</label>-->
+<!--        <input type="email" class="form-control" id="email" name="email" required>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label for="age">Wiek:</label>-->
+<!--        <input type="number" class="form-control" id="age" name="age" min="1" max="100" required>-->
+<!--    </div>-->
+<!--    -->
+<!--</form>-->
 
 
 
