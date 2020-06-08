@@ -30,17 +30,32 @@
 
 
 obrazki=new Array();
-obrazki[0]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt1.JPG')}}" width="500"><br/><br/></div>';
-obrazki[1]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt2.JPG')}}" width="500" ><br/><br/></div>';
-obrazki[2]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt3.JPG')}}" width="500" ><br/><br/></div>';
-obrazki[3]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt4.JPG')}}" width="500"><br/><br/></div>';
-obrazki[4]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt5.JPG')}}" width="500"><br/><br/></div>';
-obrazki[5]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt6.JPG')}}" width="500"><br/><br/></div>';
-obrazki[6]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt7.JPG')}}" width="500"><br/><br/></div>';
+obrazki[0]='<div style="text-align: center"><img src="{{url_for('static', filename='p1.JPG')}}" width="500"><br/><br/></div>';
+obrazki[1]='<div style="text-align: center"><img src="{{url_for('static', filename='p2.JPG')}}" width="500" ><br/><br/></div>';
+obrazki[2]='<div style="text-align: center"><img src="{{url_for('static', filename='p3.JPG')}}" width="500" ><br/><br/></div>';
+obrazki[3]='<div style="text-align: center"><img src="{{url_for('static', filename='p4.JPG')}}" width="500"><br/><br/></div>';
+obrazki[4]='<div style="text-align: center"><img src="{{url_for('static', filename='p5.JPG')}}" width="500"><br/><br/></div>';
+obrazki[5]='<div style="text-align: center"><img src="{{url_for('static', filename='p6.JPG')}}" width="500"><br/><br/></div>';
+obrazki[6]='<div style="text-align: center"><img src="{{url_for('static', filename='p7.JPG')}}" width="500"><br/><br/></div>';
+obrazki[7]='<div style="text-align: center"><img src="{{url_for('static', filename='p8.JPG')}}" width="500"><br/><br/></div>';
+obrazki[8]='<div style="text-align: center"><img src="{{url_for('static', filename='p9.JPG')}}" width="500"><br/><br/></div>';
+obrazki[9]='<div style="text-align: center"><img src="{{url_for('static', filename='p10.JPG')}}" width="500"><br/><br/></div>';
+obrazki[10]='<div style="text-align: center"><img src="{{url_for('static', filename='p11.JPG')}}" width="500"><br/><br/></div>';
+obrazki[11]='<div style="text-align: center"><img src="{{url_for('static', filename='p12.JPG')}}" width="500"><br/><br/></div>';
+obrazki[12]='<div style="text-align: center"><img src="{{url_for('static', filename='p13.JPG')}}" width="500"><br/><br/></div>';
+obrazki[13]='<div style="text-align: center"><img src="{{url_for('static', filename='p14.JPG')}}" width="500"><br/><br/></div>';
+obrazki[14]='<div style="text-align: center"><img src="{{url_for('static', filename='p15.JPG')}}" width="500"><br/><br/></div>';
+obrazki[15]='<div style="text-align: center"><img src="{{url_for('static', filename='p16.JPG')}}" width="500"><br/><br/></div>';
+obrazki[16]='<div style="text-align: center"><img src="{{url_for('static', filename='p17.JPG')}}" width="500"><br/><br/></div>';
+obrazki[17]='<div style="text-align: center"><img src="{{url_for('static', filename='f1.JPG')}}" width="500"><br/><br/></div>';
+obrazki[18]='<div style="text-align: center"><img src="{{url_for('static', filename='f2.JPG')}}" width="500"><br/><br/></div>';
+obrazki[19]='<div style="text-align: center"><img src="{{url_for('static', filename='f3.JPG')}}" width="500"><br/><br/></div>';
+obrazki[20]='<div style="text-align: center"><img src="{{url_for('static', filename='f4.JPG')}}" width="500"><br/><br/></div>';
+obrazki[21]='<div style="text-align: center"><img src="{{url_for('static', filename='f5.JPG')}}" width="500"><br/><br/></div>';
 
 var arr = [];
-while(arr.length < 3){
-    var r = Math.floor(Math.random() * 7);
+while(arr.length < 10){
+    var r = Math.floor(Math.random() * 22);
     if(arr.indexOf(r) === -1) arr.push(r);
 }
 console.log(arr);
@@ -122,10 +137,10 @@ document.write(obrazki[arr[0]]);
             <label for="cowbell">Suwak</label>
         </div>
 
-    </form>
+
 </div>
 
-    
+
 <div class="tab">Pytanie 2:
 <script>
 document.write(obrazki[arr[1]]);
@@ -156,7 +171,7 @@ document.write(obrazki[arr[1]]);
             <label for="cowbell">Suwak</label>
         </div>
 
-    </form>
+
 </div>
 
 <div class="tab">Pytanie 3:
@@ -188,17 +203,236 @@ document.write(obrazki[arr[2]]);
                    min="0" max="100" value="0" step="25">
             <label for="cowbell">Suwak</label>
         </div>
-
-    </form>
 </div>
 
+<div class="tab">Pytanie 4:
+<script>
+document.write(obrazki[arr[3]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+</div>
+
+
+<div class="tab">Pytanie 5:
+<script>
+document.write(obrazki[arr[4]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+</div>
+
+<div class="tab">Pytanie 6:
+<script>
+document.write(obrazki[arr[5]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+</div>
+
+<div class="tab">Pytanie 7:
+<script>
+document.write(obrazki[arr[6]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+</div>
+
+<div class="tab">Pytanie 8:
+<script>
+document.write(obrazki[arr[7]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+</div>
+
+
+<div class="tab">Pytanie 9:
+<script>
+document.write(obrazki[arr[8]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+</div>
+
+
+<div class="tab">Pytanie 10:
+<script>
+document.write(obrazki[arr[9]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+                </form>
+</div>
 
 
 <div style="overflow:auto;">
   <div style="float:right;">
-    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    <button type="button" class="btn btn-secondary btn-lg" id="prevBtn" onclick="nextPrev(-1)">Wróć</button>
+    <a href="javascript:scroll(0,300);" class="btn btn-success btn-lg" type="button" id="nextBtn" onclick="nextPrev(1)">Dalej</a>
   </div>
+
 </div>
 
 <!-- Circles which indicates the steps of the form: -->
@@ -207,6 +441,13 @@ document.write(obrazki[arr[2]]);
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
 </div>
 
 </form>
@@ -292,7 +533,8 @@ input.invalid {
 }
 </style>
 
-<script type="text/javascript">var currentTab = 0; // Current tab is set to be the first tab (0)
+<script type="text/javascript">
+var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
 function showTab(n) {
@@ -306,9 +548,9 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Zakończ";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Dalej";
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)

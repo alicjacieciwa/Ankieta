@@ -20,7 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143342f7-f0c3-4a1d-a49f-54909ebdc64e" name="Default" comment="multisteps form">
+      <change afterPath="$PROJECT_DIR$/static/f1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/f2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/f3.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/f4.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/f5.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p10.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p11.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p12.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p13.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p14.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p15.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p16.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p17.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p3.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p4.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p5.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p6.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p8.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/p9.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pyt1.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pyt2.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pyt3.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pyt4.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pyt5.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pyt6.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pyt7.JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form_ankieta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form_ankieta.html" afterDir="false" />
     </list>
