@@ -13,23 +13,21 @@ db = SQLAlchemy(app)
 class Formdata(db.Model):
     __tablename__ = 'formdata'
     id = db.Column(db.Integer, primary_key=True)
-    created_at = db.Column(db.DateTime, default=datetime.now)
-    firstname = db.Column(db.String, nullable=False)
-    email = db.Column(db.String)
-    age = db.Column(db.Integer)
-    income = db.Column(db.Integer)
-    satisfaction = db.Column(db.Integer)
-    q1 = db.Column(db.Integer)
-    q2 = db.Column(db.Integer)
+    plec = db.Column(db.String)
+    wiek = db.Column(db.String)
+    wyksztalcenie = db.Column(db.String)
+    q1 = db.Column(db.String)
+    q2 = db.Column(db.String)
+    q3 = db.Column(db.String)
 
-    def __init__(self, firstname, email, age, income, satisfaction, q1, q2):
-        self.firstname = firstname
-        self.email = email
-        self.age = age
-        self.income = income
-        self.satisfaction = satisfaction
+
+    def __init__(self, plec, wiek, wyksztalcenie, q1, q2, q3):
+        self.plec= plec
+        self.wiek = wiek
+        self.wyksztalcenie = wyksztalcenie
         self.q1 = q1
         self.q2 = q2
+        self.q3 = q3
 
 db.create_all()
 
@@ -71,31 +69,28 @@ def show_result():
     fd_list = db.session.query(Formdata).all()
 
     # Some simple statistics for sample questions
-    satisfaction = []
+
     q1 = []
     q2 = []
+    q3 = []
+
     for el in fd_list:
-        satisfaction.append(int(el.satisfaction))
         q1.append(int(el.q1))
         q2.append(int(el.q2))
+        q3.append(int(el.q3))
 
-    if len(satisfaction) > 0:
-        mean_satisfaction = statistics.mean(satisfaction)
-    else:
-        mean_satisfaction = 0
-
-    if len(q1) > 0:
-        mean_q1 = statistics.mean(q1)
-    else:
-        mean_q1 = 0
-
-    if len(q2) > 0:
-        mean_q2 = statistics.mean(q2)
-    else:
-        mean_q2 = 0
-
-    # Prepare data for google charts
-    data = [['Satisfaction', mean_satisfaction], ['Python skill', mean_q1], ['Flask skill', mean_q2]]
+    # if len(q1) > 0:
+    #     mean_q1 = statistics.mean(q1)
+    # else:
+    #     mean_q1 = 0
+    #
+    # if len(q2) > 0:
+    #     mean_q2 = statistics.mean(q2)
+    # else:
+    #     mean_q2 = 0
+    #
+    # # Prepare data for google charts
+    # data = [['Satisfaction', mean_satisfaction], ['Python skill', mean_q1], ['Flask skill', mean_q2]]
 
     return render_template('result.html', data=data)
 
@@ -103,16 +98,15 @@ def show_result():
 @app.route("/save", methods=['POST'])
 def save():
     #Get data from FORM
-    firstname = request.form['firstname']
-    email = request.form['email']
-    age = request.form['age']
-    income = request.form['income']
-    satisfaction = request.form['satisfaction']
+    plec = request.form['plec']
+    wiek = request.form['wiek']
+    wyksztalcenie = request.form['wyksztalcenie']
     q1 = request.form['q1']
     q2 = request.form['q2']
+    q3 = request.form['q3']
 
     # Save the data
-    fd = Formdata(firstname, email, age, income, satisfaction, q1, q2)
+    fd = Formdata(plec, wiek, wyksztalcenie, q1, q2, q3)
     db.session.add(fd)
     db.session.commit()
 
