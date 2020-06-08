@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143342f7-f0c3-4a1d-a49f-54909ebdc64e" name="Default" comment="multisteps form">
-      <change afterPath="$PROJECT_DIR$/templates/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/chartjs-datalabels.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/wyniki.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formdata.db" beforeDir="false" afterPath="$PROJECT_DIR$/formdata.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit5_webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit5_webapp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +185,16 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
