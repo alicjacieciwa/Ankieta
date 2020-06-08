@@ -4,7 +4,7 @@ from datetime import datetime
 import statistics
 
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///formdata.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
 
@@ -14,7 +14,7 @@ class Formdata(db.Model):
     __tablename__ = 'formdata'
     id = db.Column(db.Integer, primary_key=True)
     plec = db.Column(db.String)
-    wiek = db.Column(db.String)
+    wiek = db.Column(db.Integer)
     wyksztalcenie = db.Column(db.String)
     q1 = db.Column(db.String)
     q2 = db.Column(db.String)
@@ -22,7 +22,7 @@ class Formdata(db.Model):
 
 
     def __init__(self, plec, wiek, wyksztalcenie, q1, q2, q3):
-        self.plec= plec
+        self.plec = plec
         self.wiek = wiek
         self.wyksztalcenie = wyksztalcenie
         self.q1 = q1
@@ -60,8 +60,6 @@ def show_aboutproject():
 def show_raw():
     fd = db.session.query(Formdata).all()
     return render_template('raw.html', formdata=fd)
-
-
 
 
 @app.route("/result")
