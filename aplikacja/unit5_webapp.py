@@ -42,6 +42,10 @@ def welcome():
 def show_form():
     return render_template('form.html')
 
+@app.route("/form_ankieta")
+def show_form_ankieta():
+    return render_template('form_ankieta.html')
+
 @app.route("/form/questions")
 def show_questions():
     return render_template('questions.html')
@@ -58,6 +62,8 @@ def show_aboutproject():
 def show_raw():
     fd = db.session.query(Formdata).all()
     return render_template('raw.html', formdata=fd)
+
+
 
 
 @app.route("/result")

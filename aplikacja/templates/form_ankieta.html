@@ -35,22 +35,19 @@ while(arr.length < 3){
 console.log(arr);
 
 for(i = 0; i < arr.length; i++){
-
+document.write(arr[i]);
 document.write(obrazki[arr[i]]);
-document.getElementbyid('form');
+document.getElementbyid('ank');
 
-const input = document.querySelector("#someRadio")
-if (input.checked) {
-    console.log("Wartość radio: ", input.value);
-}
 }
 
 </script>
+<div class="form-group" id = "ank" style="text-align: left">
     <form role="form" action="/save" method="post">
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label></h6>
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg"  value="NIE"
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
         </div>
 
         <div class="form-group">
@@ -73,7 +70,6 @@ if (input.checked) {
         </div>
 
     </form>
-
 
 </div>
 {% endblock %}

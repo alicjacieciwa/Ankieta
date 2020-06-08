@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="143342f7-f0c3-4a1d-a49f-54909ebdc64e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/pyt1.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pyt2.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pyt3.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pyt4.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pyt5.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pyt6.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pyt7.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/unit5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/unit5.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form_ankieta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form_ankieta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit5_webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit5_webapp.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,18 +63,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alicja\Documents\z pulpitu\studia\magisterka\I semestr\ankieta\aplikacja\templates" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.unit5_webapp">
     <configuration default="true" type="ccruntests" factoryName="Run Study Tests">
@@ -120,17 +122,14 @@
       <module name="unit5" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Alicja\Anaconda3\python.exe" />
+      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="false" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit5_webapp.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -175,13 +174,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -196,10 +194,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="358" y="23" key="#unit5_webapp" timestamp="1585248846245">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591617335579">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1591617335579" />
+    <state x="318" y="0" key="#unit5_webapp" timestamp="1591617133626">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="318" y="0" key="#unit5_webapp/0.0.1280.689@0.0.1280.689" timestamp="1591617133626" />
     <state x="358" y="23" key="#unit5_webapp/0.23.1440.823@0.23.1440.823" timestamp="1585248846245" />
+    <state x="265" y="0" width="1015" height="689" key="CommitChangelistDialog2" timestamp="1591617221843">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="265" y="0" width="1015" height="689" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1591617221843" />
+    <state x="93" y="93" width="1095" height="504" key="DiffContextDialog" timestamp="1591619467091">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="93" y="93" width="1095" height="504" key="DiffContextDialog/0.0.1280.689@0.0.1280.689" timestamp="1591619467091" />
     <state width="1419" height="106" key="GridCell.Tab.0.bottom" timestamp="1585922741356">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
@@ -220,5 +231,13 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1585850366365" />
+    <state x="351" y="79" key="VcsDiffUtil.ChangesDialog" timestamp="1591616008099">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="351" y="79" key="VcsDiffUtil.ChangesDialog/0.0.1280.689@0.0.1280.689" timestamp="1591616008099" />
+    <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591616891708">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1591616891708" />
   </component>
 </project>
