@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143342f7-f0c3-4a1d-a49f-54909ebdc64e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/form.js" afterDir="false" />
+    <list default="true" id="143342f7-f0c3-4a1d-a49f-54909ebdc64e" name="Default" comment="multisteps form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form_ankieta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form_ankieta.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,6 +167,14 @@
       <option name="presentableId" value="Default" />
       <updated>1460387613404</updated>
     </task>
+    <task id="LOCAL-00001" summary="multisteps form">
+      <created>1591625183097</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591625183097</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -201,7 +209,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="multisteps form" />
+    <option name="LAST_COMMIT_MESSAGE" value="multisteps form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591617335579">
