@@ -11,14 +11,19 @@
     <thead>
     <tr>
         <th>#</th>
-        <th>Created at</th>
-        <th>First Name</th>
-        <th>Email</th>
-        <th>Age</th>
-        <th>Income</th>
-        <th>Satisfaction</th>
-        <th>Python</th>
-        <th>Flask</th>
+        <th>Plec</th>
+        <th>Wiek</th>
+        <th>Wyksztalcenie</th>
+        <th>Pytanie1</th>
+        <th>Pytanie2</th>
+        <th>Pytanie3</th>
+        <th>Pytanie4</th>
+        <th>Pytanie5</th>
+        <th>Pytanie6</th>
+        <th>Pytanie7</th>
+        <th>Pytanie8</th>
+        <th>Pytanie9</th>
+        <th>Pytanie10</th>
     </tr>
     </thead>
 
@@ -26,15 +31,39 @@
     {% for element in formdata %}
     <tr>
         <td>{{ element.id }}</td>
-        <td>{{ element.created_at }}</td>
-        <td>{{ element.firstname }}</td>
-        <td>{{ element.email }}</td>
-        <td>{{ element.age }}</td>
-        <td>{{ element.income }}</td>
-        <td>{{ element.satisfaction }}</td>
-        <td>{{ element.q1 }}</td>
-        <td>{{ element.q2 }}</td>
-
+        <td>{{ element.plec }}</td>
+        <td>{{ element.wiek }}</td>
+        <td>{{ element.wyksztalcenie }}</td>
+        <td>{{ element.q1_1 }}</td>
+        <td>{{ element.q2_1 }}</td>
+        <td>{{ element.q3_1 }}</td>
+        <td>{{ element.q1_2 }}</td>
+        <td>{{ element.q2_2 }}</td>
+        <td>{{ element.q3_2 }}</td>
+        <td>{{ element.q1_3 }}</td>
+        <td>{{ element.q2_3 }}</td>
+        <td>{{ element.q3_3 }}</td>
+        <td>{{ element.q1_4 }}</td>
+        <td>{{ element.q2_4 }}</td>
+        <td>{{ element.q3_4 }}</td>
+        <td>{{ element.q1_5 }}</td>
+        <td>{{ element.q2_5 }}</td>
+        <td>{{ element.q3_5 }}</td>
+        <td>{{ element.q1_6 }}</td>
+        <td>{{ element.q2_6 }}</td>
+        <td>{{ element.q3_6 }}</td>
+        <td>{{ element.q1_7 }}</td>
+        <td>{{ element.q2_7 }}</td>
+        <td>{{ element.q3_7 }}</td>
+        <td>{{ element.q1_8 }}</td>
+        <td>{{ element.q2_8 }}</td>
+        <td>{{ element.q3_8 }}</td>
+        <td>{{ element.q1_9 }}</td>
+        <td>{{ element.q2_9 }}</td>
+        <td>{{ element.q3_9 }}</td>
+        <td>{{ element.q1_10 }}</td>
+        <td>{{ element.q2_10 }}</td>
+        <td>{{ element.q3_10 }}</td>
     </tr>
     {% endfor %}
     </tbody>
