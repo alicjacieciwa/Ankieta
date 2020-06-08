@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143342f7-f0c3-4a1d-a49f-54909ebdc64e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form_ankieta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form_ankieta.html" afterDir="false" />
     </list>
@@ -59,6 +60,18 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alicja\Documents\z pulpitu\studia\magisterka\I semestr\ankieta\aplikacja\templates" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.unit5_webapp">
     <configuration default="true" type="ccruntests" factoryName="Run Study Tests">
@@ -118,10 +131,7 @@
       <module name="unit5" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Alicja\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="false" />
@@ -173,12 +183,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
