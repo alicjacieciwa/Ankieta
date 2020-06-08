@@ -12,12 +12,49 @@
 </p>
 
 
+
+<script>
+    Array.prototype.random = function(limit)
+{
+	if (typeof limit == 'undefined' || limit < 0) limit = 1;
+	else if (!limit) limit = this.length;
+	for (var i = 0, source = this, target = new Array(), n = source.length; i < limit && n > 0; i++)
+	{
+		do { var index = Math.random(); } while (index == 1);
+		index = Math.floor(index * n);
+		target.push(source[index]);
+		source[index] = source[--n];
+	}
+	return target;
+}
+
+
+obrazki=new Array();
+obrazki[0]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt1.JPG')}}" width="500"><br/><br/></div>';
+obrazki[1]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt2.JPG')}}" width="500" ><br/><br/></div>';
+obrazki[2]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt3.JPG')}}" width="500" ><br/><br/></div>';
+obrazki[3]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt4.JPG')}}" width="500"><br/><br/></div>';
+obrazki[4]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt5.JPG')}}" width="500"><br/><br/></div>';
+obrazki[5]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt6.JPG')}}" width="500"><br/><br/></div>';
+obrazki[6]='<div style="text-align: center"><img src="{{url_for('static', filename='pyt7.JPG')}}" width="500"><br/><br/></div>';
+
+var arr = [];
+while(arr.length < 3){
+    var r = Math.floor(Math.random() * 7);
+    if(arr.indexOf(r) === -1) arr.push(r);
+}
+console.log(arr);
+</script>
+
+
+
+
+
 <div id="sh" style="text-align: center"><button type="button" class="btn btn-primary btn-lg">Przejdź do ankiety</button></div>
 <div id="ukryty_tekst">
 
 <form id="regForm" action="">
 
-<h1>Twoje dane osobowe:</h1>
 
 <!-- One "tab" for each step in the form: -->
 <div class="tab">Płeć:
@@ -55,21 +92,107 @@
 
 </div>
 
-<div class="tab">Contact Info:
-  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+<div class="tab">Pytanie 1:
+<script>
+document.write(obrazki[arr[0]]);
+</script>
+        <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+
+    </form>
 </div>
 
-<div class="tab">Birthday:
-  <p><input placeholder="dd" oninput="this.className = ''"></p>
-  <p><input placeholder="mm" oninput="this.className = ''"></p>
-  <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+    
+<div class="tab">Pytanie 2:
+<script>
+document.write(obrazki[arr[1]]);
+</script>
+        <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+
+    </form>
 </div>
 
-<div class="tab">Login Info:
-  <p><input placeholder="Username..." oninput="this.className = ''"></p>
-  <p><input placeholder="Password..." oninput="this.className = ''"></p>
+<div class="tab">Pytanie 3:
+<script>
+document.write(obrazki[arr[2]]);
+</script>
+            <form role="form" action="/save" method="post">
+        <div class="form-group">
+        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
+        <input type="button" class="btn btn-info btn-lg"  value="TAK"/>
+        <input type="button" class="btn btn-info btn-lg"  value="NIE"/>
+        </div>
+
+        <div class="form-group">
+        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+        <label><input type="checkbox" > Telewizja</label><br/>
+        <label><input type="checkbox" > Internet</label><br/>
+        <label><input type="checkbox" > Radio</label><br/>
+        <label><input type="checkbox" > Media społecznościowe</label><br/>
+        <label><input type="checkbox" > Gazeta</label><br/>
+        <label><input type="checkbox" > Ta ankieta</label><br/>
+        <label><input type="checkbox" > Inne</label><br/>
+        </div>
+
+
+        <div class="form-group">
+            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
+            <input type="range" id="cowbell" name="cowbell"
+                   min="0" max="100" value="0" step="25">
+            <label for="cowbell">Suwak</label>
+        </div>
+
+    </form>
 </div>
+
+
 
 <div style="overflow:auto;">
   <div style="float:right;">
@@ -88,46 +211,12 @@
 
 </form>
 
-
-
-
-<!--    <form role="form" action="/save" method="post">-->
-<!--    <h3>Twoje dane osobowe:</h3><br/>-->
-<!--    <div class="form-group">-->
-<!--        <label>Płeć:</label><br/>-->
-<!--        <select name="plec">-->
-<!--		<option>Kobieta</option>-->
-<!--		<option>Mężczyzna</option>-->
-<!--        <option>Inna</option>-->
-<!--	</select>-->
-<!--    </div>-->
-
-<!--     <div class="form-group">-->
-<!--        <label>Grupa wiekowa:</label><br/>-->
-<!--        <select name="wiek">-->
-<!--		<option>mniej niż 18</option>-->
-<!--		<option>18-25</option>-->
-<!--        <option>25-40</option>-->
-<!--        <option>41-60</option>-->
-<!--        <option>ponad 60</option>-->
-<!--	</select>-->
-<!--    </div>-->
-
-<!--     <div class="form-group">-->
-<!--        <label>Wykształcenie:</label><br/>-->
-<!--        <select name="wyksztalcenie">-->
-<!--		<option>Podstawowe</option>-->
-<!--		<option>Średnie</option>-->
-<!--        <option>Wyższe</option>-->
-<!--        <option>Zawodowe</option>-->
-<!--        <option>Gimnazjalne</option>-->
-<!--        <option>Brak</option>-->
-<!--        <option>Inne</option>-->
-<!--	</select>-->
-<!--    </div>-->
-<!--</form>-->
-
 </div>
+
+
+
+
+
 
 <script>
 var div = document.getElementById('ukryty_tekst');
@@ -164,7 +253,7 @@ document.getElementById('sh').onclick = function()
 /* Style the input fields */
 input {
   padding: 10px;
-  width: 100%;
+  //width: 100%;
   font-size: 17px;
   font-family: Raleway;
   border: 1px solid #aaaaaa;
@@ -274,7 +363,7 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class to the current step:
   x[n].className += " active";
-}</script>  
+}</script>
 
 
 
