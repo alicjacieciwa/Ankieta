@@ -98,9 +98,6 @@ def welcome():
 def show_form():
     return render_template('form.html')
 
-@app.route("/form_ankieta")
-def show_form_ankieta():
-    return render_template('form_ankieta.html')
 
 @app.route("/form/questions")
 def show_questions():
@@ -120,8 +117,8 @@ def show_raw():
     return render_template('raw.html', formdata=fd)
 
 
-@app.route("/result")
-def show_result():
+@app.route("/wyniki")
+def show_wyniki():
     fd_list = db.session.query(Formdata).all()
 
     q1_1 = []
@@ -175,7 +172,7 @@ def show_result():
 #     # # Prepare data for google charts
 #     # data = [['Satisfaction', mean_satisfaction], ['Python skill', mean_q1], ['Flask skill', mean_q2]]
 #
-    return render_template('result.html')
+    return render_template('wyniki.html')
 
 
 @app.route("/save", methods=['POST'])
