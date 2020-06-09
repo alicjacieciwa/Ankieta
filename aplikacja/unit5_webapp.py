@@ -220,7 +220,7 @@ def save():
     db.session.add(fd)
     db.session.commit()
 
-    return redirect('/')
+    return redirect('/wyniki')
 
 
 if __name__ == "__main__":

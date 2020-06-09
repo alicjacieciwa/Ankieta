@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="Chart.js"></script>
-<script type="text/javascript" src="chartjs-datalabels.js"></script>
+<script type="text/javascript" src="{{url_for('static', filename='Chart.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='chartjs-datalabels.js')}}"></script>
 </head>
 <body>
 <p id="demo"></p>
@@ -431,4 +435,5 @@ var myPieChart3 = new Chart(ctxP3, {
 });
 </script>
 </body>
-</html>
+<!--</html>-->
+{% endblock %}
