@@ -3,7 +3,8 @@
 
 {% block content %}
 
- <body>
+<body xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <div class="jumbotron">
   <p style="text-indent: 6em;  text-align: justify; ">Tematem ankiety, którą teraz wypełnisz jest: „Jak dużo wiesz o koronawirusie?”. Zostanie Ci przedstawione 10 postów,
       które w czasie pandemii pojawiły się na platformach społecznościowych takich jak Facebook, Instagram czy Twitter.
@@ -73,36 +74,38 @@ console.log(arr);
 
 <!-- One "tab" for each step in the form: -->
 <div class="tab">
+    <action>
     <label for="plec">Płeć:</label>
         <div class="form-group">
         <select class = "form-control" id="plec" name="plec">
-		<option>Kobieta</option>
-		<option>Mężczyzna</option>
-        <option>Inna</option>
+            <option>F</option>
+		    <option>M</option>
+<!--            <option>Inna</option>-->
 	</select>
     </div>
+
 
         <div class="form-group">
         <label for="wiek">Grupa wiekowa:</label><br/>
         <select class = "form-control" id="wiek" name="wiek">
-		<option>mniej niż 18</option>
-		<option>18-25</option>
-        <option>25-40</option>
-        <option>41-60</option>
-        <option>ponad 60</option>
+            <option><18</option>
+		    <option>18-25</option>
+            <option>25-40</option>
+            <option>41-60</option>
+            <option>60+</option>
 	</select>
     </div>
 
         <div class="form-group">
         <label for="wyksztalcenie">Wykształcenie:</label><br/>
         <select class = "form-control" id="wyksztalcenie" name="wyksztalcenie">
-		<option>Podstawowe</option>
-		<option>Średnie</option>
-        <option>Wyższe</option>
-        <option>Zawodowe</option>
-        <option>Gimnazjalne</option>
-        <option>Brak</option>
-        <option>Inne</option>
+		<option>podstawowe</option>
+		<option>średnie</option>
+        <option>wyższe</option>
+        <option>zawodowe</option>
+        <option>gimnazjalne</option>
+        <option>brak</option>
+        <option>inne</option>
 	</select>
     </div>
 
@@ -113,33 +116,37 @@ console.log(arr);
 <script>
 document.write(obrazki[arr[0]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+        <h6><label for="q1_1">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button"  name = "q1_1"  value="TAK"/>
-        <input type="button"  name = "q1_1"  value="NIE"/>
+            <select class = "form-control" id="q1_1" name="q1_1">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_1" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_1" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_1" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_1" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_1" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_1" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_1" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_1">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_1" id = "q2_1" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_1" id = "q2_1" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_1" id = "q2_1" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_1" id = "q2_1" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_1" id = "q2_1" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_1" id = "q2_1" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_1" id = "q2_1" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_1" name="q3_1"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
-
-
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_1" name="q3_1">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 </div>
 
 
@@ -147,32 +154,38 @@ document.write(obrazki[arr[0]]);
 <script>
 document.write(obrazki[arr[1]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+        <h6><label for="q1_2">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_2"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_2"  value="NIE"/>
+            <select class = "form-control" id="q1_2" name="q1_2">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_2" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_2" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_2" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_2" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_2" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_2" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_2" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_2">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_2" id = "q2_2" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_2" id = "q2_2" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_2" id = "q2_2" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_2" id = "q2_2" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_2" id = "q2_2" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_2" id = "q2_2" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_2" id = "q2_2" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_2" name="q3_2"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
 
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_2" name="q3_2">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 
 </div>
 
@@ -181,32 +194,38 @@ document.write(obrazki[arr[1]]);
 <script>
 document.write(obrazki[arr[2]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+        <h6><label for="q1_3">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_3"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_3"  value="NIE"/>
+            <select class = "form-control" id="q1_3" name="q1_3">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_3" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_3" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_3" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_3" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_3" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_3" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_3" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_3">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_3" id = "q2_3" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_3" id = "q2_3" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_3" id = "q2_3" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_3" id = "q2_3" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_3" id = "q2_3" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_3" id = "q2_3" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_3" id = "q2_3" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_3" name="q3_3"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
 
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_3" name="q3_3">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 
 </div>
 
@@ -214,32 +233,38 @@ document.write(obrazki[arr[2]]);
 <script>
 document.write(obrazki[arr[3]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+        <h6><label for="q1_4">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_4"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_4"  value="NIE"/>
+            <select class = "form-control" id="q1_4" name="q1_4">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_4" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_4" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_4" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_4" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_4" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_4" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_4" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_4">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_4" id = "q2_4" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_4" id = "q2_4" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_4" id = "q2_4" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_4" id = "q2_4" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_4" id = "q2_4" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_4" id = "q2_4" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_4" id = "q2_4" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_4" name="q3_4"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
 
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_4" name="q3_4">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 
 </div>
 
@@ -249,31 +274,38 @@ document.write(obrazki[arr[3]]);
 <script>
 document.write(obrazki[arr[4]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+        <h6><label for="q1_5">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_5"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_5"  value="NIE"/>
+            <select class = "form-control" id="q1_5" name="q1_5">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_5" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_5" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_5" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_5" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_5" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_5" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_5" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_5">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_5" id = "q2_5" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_5" id = "q2_5" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_5" id = "q2_5" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_5" id = "q2_5" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_5" id = "q2_5" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_5" id = "q2_5" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_5" id = "q2_5" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_5" name="q3_5"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
+
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_5" name="q3_5">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 
 
 </div>
@@ -282,32 +314,37 @@ document.write(obrazki[arr[4]]);
 <script>
 document.write(obrazki[arr[5]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+       <h6><label for="q1_6">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_6"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_6"  value="NIE"/>
+            <select class = "form-control" id="q1_6" name="q1_6">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_6" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_6" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_6" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_6" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_6" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_6" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_6" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_6">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_6" id = "q2_6" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_6" id = "q2_6" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_6" id = "q2_6" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_6" id = "q2_6" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_6" id = "q2_6" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_6" id = "q2_6" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_6" id = "q2_6" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_6" name="q3_6"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
-
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_6" name="q3_6">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 
 </div>
 
@@ -316,67 +353,76 @@ document.write(obrazki[arr[5]]);
 <script>
 document.write(obrazki[arr[6]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+       <h6><label for="q1_7">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_7"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_7"  value="NIE"/>
+            <select class = "form-control" id="q1_7" name="q1_7">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_7" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_7" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_7" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_7" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_7" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_7" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_7" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_7">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_7" id = "q2_7" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_7" id = "q2_7" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_7" id = "q2_7" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_7" id = "q2_7" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_7" id = "q2_7" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_7" id = "q2_7" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_7" id = "q2_7" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_7" name="q3_7"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
-
-
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_7" name="q3_7">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 </div>
+
 
 
 <div class="tab">Pytanie 8:
 <script>
 document.write(obrazki[arr[7]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+       <h6><label for="q1_8">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_8"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_8"  value="NIE"/>
+            <select class = "form-control" id="q1_8" name="q1_8">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_8" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_8" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_8" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_8" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_8" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_8" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_8" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_8">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_8" id = "q2_8" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_8" id = "q2_8" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_8" id = "q2_8" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_8" id = "q2_8" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_8" id = "q2_8" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_8" id = "q2_8" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_8" id = "q2_8" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_8" name="q3_8"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
-
-
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_8" name="q3_8">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 </div>
 
 
@@ -385,65 +431,77 @@ document.write(obrazki[arr[7]]);
 <script>
 document.write(obrazki[arr[8]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+       <h6><label for="q1_9">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_9"  value="TAK"/>
-        <input type="button" class="btn btn-info btn-lg" name = "q1_9"  value="NIE"/>
+            <select class = "form-control" id="q1_9" name="q1_9">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_9" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_9" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_9" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_9" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_9" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_9" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_9" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_9">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_9" id = "q2_9" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_9" id = "q2_9" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_9" id = "q2_9" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_9" id = "q2_9" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_9" id = "q2_9" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_9" id = "q2_9" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_9" id = "q2_9" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_9" name="q3_9"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
-
-
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_9" name="q3_9">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
 </div>
+
 
 
 <div class="tab">Pytanie 10:
 <script>
 document.write(obrazki[arr[9]]);
 </script>
-<!--        <form role="form" action="/save" method="post">-->
+       <h6><label for="q1_10">Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
         <div class="form-group">
-        <h6><label>Czy spotkałaś/spotkałeś się z informacją podaną w powyższym poście?</label><br/></h6>
-        <input type="option"  name = "q1_10"  value="TAK"/>
-        <input type="option"  name = "q1_10"  value="NIE"/>
+            <select class = "form-control" id="q1_10" name="q1_10">
+                <option>Tak</option>
+                <option>Nie</option>
+            </select>
         </div>
 
-        <div class="form-group">
-        <h6><label>Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
-        <label><input type="checkbox" name = "q2_10" value="Telewizja"> Telewizja</label><br/>
-        <label><input type="checkbox" name = "q2_10" value="Internet"> Internet</label><br/>
-        <label><input type="checkbox" name = "q2_10" value="Radio"> Radio</label><br/>
-        <label><input type="checkbox" name = "q2_10" value="MediaSpolecznosciowe"> Media społecznościowe</label><br/>
-        <label><input type="checkbox" name = "q2_10" value="Gazeta"> Gazeta</label><br/>
-        <label><input type="checkbox" name = "q2_10" value="Ankieta"> Ta ankieta</label><br/>
-        <label><input type="checkbox" name = "q2_10" value="Inne"> Inne</label><br/>
-        </div>
+        <h6><label for="q2_10">Z jakiego źródła dotarła do Ciebie ta informacja?</label><br/></h6>
+            <div class="form-group">
+                <input type="radio" name="q2_10" id = "q2_10" value="TV" checked> Telewizja</input><br/>
+                <input type="radio" name="q2_10" id = "q2_10" value="internet"> Internet</input><br/>
+                <input type="radio" name="q2_10" id = "q2_10" value="radio"> Radio</input><br/>
+                <input type="radio" name="q2_10" id = "q2_10" value="media społecznościowe"> Media społecznościowe</input><br/>
+                <input type="radio" name="q2_10" id = "q2_10" value="gazeta"> Gazeta</input><br/>
+                <input type="radio" name="q2_10" id = "q2_10" value="ta ankieta"> Ta ankieta</input><br/>
+                <input type="radio" name="q2_10" id = "q2_10" value="inne"> Inne</input><br/>
+            </div>
 
 
-        <div class="form-group">
-            <h6><label>Czy ufasz podanej informacji?</label><br/></h6>
-            <input type="range" id="q3_10" name="q3_10"
-                   min="0" max="100" value="50" step="25">
-            <label for="cowbell">Suwak</label>
-        </div>
+    <h6><label>Czy ufasz podanej informacji?</br></label></h6>
+        <label>Odpowiedzi zostały wyrażone w procentach % według skali:</br> 0- nie ufam</br> 25- raczej nie ufam</br> 50- nie mam zdania</br> 75- raczej ufam</br> 100- całkowicie ufam</label><br/>
+            <div class="form-group">
+                <select class = "form-control" id="q3_10" name="q3_10">
+                    <option>0</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                </select>
+                </div>
+
         </form>
 </div>
 
