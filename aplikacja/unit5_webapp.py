@@ -5,11 +5,11 @@ import statistics
 
 
 app = Flask(__name__)
-<<<<<<< HEAD
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
-=======
+
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
->>>>>>> 1b7f85424241e9afda4d10450aec9d178a788030
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///formdata.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
 
