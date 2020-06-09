@@ -5,11 +5,9 @@ import statistics
 
 
 app = Flask(__name__)
-<<<<<<< HEAD
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
-=======
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
->>>>>>> 1b7f85424241e9afda4d10450aec9d178a788030
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///formdata.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
 
@@ -177,7 +175,7 @@ def show_result():
 #     # # Prepare data for google charts
 #     # data = [['Satisfaction', mean_satisfaction], ['Python skill', mean_q1], ['Flask skill', mean_q2]]
 #
-#     return render_template('result.html')
+    return render_template('result.html')
 
 
 @app.route("/save", methods=['POST'])
