@@ -147,6 +147,9 @@ document.write(obrazki[arr[0]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp1" id="odp1" value=""></input>
+			</div>
 </div>
 
 
@@ -186,6 +189,9 @@ document.write(obrazki[arr[1]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp2" id="odp2" value="<script>arr[1]</script>"></input>
+			</div>
 
 </div>
 
@@ -226,6 +232,9 @@ document.write(obrazki[arr[2]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp3" id="odp3" value="<script>arr[2]</script>"></input>
+			</div>
 
 </div>
 
@@ -265,6 +274,9 @@ document.write(obrazki[arr[3]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp4" id="odp4" value="<script>arr[3]</script>"></input>
+			</div>
 
 </div>
 
@@ -306,6 +318,9 @@ document.write(obrazki[arr[4]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp5" id="odp5" value="<script>arr[3]</script>"></input>
+			</div>
 
 
 </div>
@@ -345,6 +360,9 @@ document.write(obrazki[arr[5]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp6" id="odp6" value="<script>arr[5]</script>"></input>
+			</div>
 
 </div>
 
@@ -384,6 +402,9 @@ document.write(obrazki[arr[6]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp7" id="odp7" value="<script>arr[6]</script>"></input>
+			</div>
 </div>
 
 
@@ -423,6 +444,9 @@ document.write(obrazki[arr[7]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp8" id="odp8" value="<script>arr[7]</script>"></input>
+			</div>
 </div>
 
 
@@ -462,6 +486,9 @@ document.write(obrazki[arr[8]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp9" id="odp9" value="<script>arr[8]</script>"></input>
+			</div>
 </div>
 
 
@@ -501,6 +528,9 @@ document.write(obrazki[arr[9]]);
                     <option>100</option>
                 </select>
                 </div>
+			<div class="form-group">
+				<input type="hidden" name="odp10" id="odp10" value="<script>arr[9]</script>"></input>
+			</div>
 
         </form>
 </div>
@@ -612,6 +642,19 @@ input.invalid {
 }
 </style>
 
+
+<script>
+	document.getElementById('odp1').value = arr[0];
+	document.getElementById('odp2').value = arr[1];
+	document.getElementById('odp3').value = arr[2];
+	document.getElementById('odp4').value = arr[3];
+	document.getElementById('odp5').value = arr[4];
+	document.getElementById('odp6').value = arr[5];
+	document.getElementById('odp7').value = arr[6];
+	document.getElementById('odp8').value = arr[7];
+	document.getElementById('odp9').value = arr[8];
+	document.getElementById('odp10').value = arr[9];
+</script>
 <script type="text/javascript">
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
